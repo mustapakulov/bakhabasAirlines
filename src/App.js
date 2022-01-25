@@ -1,11 +1,7 @@
-import "./App.css";
+import MyRoutes from ".MyRoutes";
 
 function App() {
-  return (
-    <div className="App">
-      
-    </div>
-  );
+  return <MyRoutes />;
 }
 
 export default App;

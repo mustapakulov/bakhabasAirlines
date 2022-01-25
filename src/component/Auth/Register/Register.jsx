@@ -1,16 +1,19 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import "../css/register.css";
-import { createTheme } from "@mui/material/styles";
+
 import { useNavigate } from "react-router-dom";
 import { tiketContext } from "../../MyContext/MyContext";
-import { ThemeProvider } from "@emotion/react";
-import { Avatar, Button, Container, CssBaseline, Grid, TextField, Typography } from "@mui/material";
+import { blue } from "@mui/material/colors";
+import {
+  Container,
+  CssBaseline,
+  Grid,
+  TextField,
+  Typography,
+} from "@mui/material";
 import { Box } from "@mui/system";
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-
-// const theme = createTheme();
-
+const color = blue[50];
 export default function Register() {
   const { signUp } = React.useContext(tiketContext);
   const navigate = useNavigate();
@@ -35,79 +38,56 @@ export default function Register() {
     }
   }
 
-
-
-    //         <p>
-    //           Don't have an account?
-    //           <span>Вход в аккаунт</span>
-    //         </p>
-
-    //         <Link to="/register">
-    //           <button type="submit" >Вход в аккаунт</button>
-    //         </Link>
-
-    //         <p>
-    //           Have an account?
-    //           <span>Регистрация</span>
-    //         </p>
-    //       </div>
-    //     </div>
-    //   </div>
-
-  
-  <Container>
-  <CssBaseline />
-  <div className="login">
-    <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-      <LockOutlinedIcon />
-    </Avatar>
-  <div className="loginContainer">
-
-    <Typography component="h1" variant="h5">
-      Sign up
-    </Typography>
-    <Box component="form" noValidate onSubmit={handleSubmit} >
-      <Grid container spacing={2}>
-        <Grid item xs={12}>
-          <TextField
-            required
-            fullWidth
-            id="email"
-            // label="Email Address"
-            name="email"
-            autoComplete="email"
-          />
-        </Grid>
-        <Grid item xs={12}>
-          <TextField
-            required
-            fullWidth
-            name="password"
-            // label="Password"
-            type="password"
-            id="password"
-            autoComplete="new-password"
-          />
-        </Grid>
-      </Grid>
-      <button
-        type="submit"
-      >
-        Sign Up
-      </button>
-      <Grid container justifyContent="flex-end">
-      </Grid>
-    </Box>
-  </div>
-  </div>
-</Container>
-
-            <p>
-              Don't have an account?
-              <span>Вход в аккаунт qweqweqwe</span>
-            </p>
-
-
-
+  return (
+    <Container>
+      <CssBaseline />
+      <div className="login">
+        <div className="loginContainer">
+          <Typography component="h1" variant="h5" color={color}>
+            Регистрация
+          </Typography>
+          <Box component="form" noValidate onSubmit={handleSubmit}>
+            <Grid container spacing={2}>
+              <Grid item xs={12}>
+                <p className="errorMsg">Ваш логин:</p>
+                <TextField
+                  required
+                  fullWidth
+                  id="email"
+                  name="email"
+                  autoComplete="email"
+                  sx={{ borderRadius: "50%" }}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <p className="errorMsg">Ваш пароль:</p>
+                <TextField
+                  required
+                  fullWidth
+                  name="password"
+                  type="password"
+                  id="password"
+                  autoComplete="new-password"
+                />
+              </Grid>
+            </Grid>
+            <div className="btnContainer">
+              <>
+                <button type="submit">Регистрация</button>
+              </>
+              <>
+                <Grid container justifyContent="flex-end" sx={{ mt: 2 }}>
+                  {" "}
+                  <p className="labelRegister"> У вас есть аккаунт? </p>
+                  <Link to="/register">
+                    <button type="submit">Вход в аккаунт</button>
+                  </Link>{" "}
+                </Grid>
+              </>
+            </div>
+          </Box>
+        </div>
+      </div>
+    </Container>
   );
 }

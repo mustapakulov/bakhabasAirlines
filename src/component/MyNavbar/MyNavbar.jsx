@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import CssBaseline from "@mui/material/CssBaseline";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
+// import Container from "@mui/material/Container";
 import Fab from "@mui/material/Fab";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import Zoom from "@mui/material/Zoom";
@@ -52,7 +52,6 @@ function Navbar(props) {
 
 Navbar.propTypes = {
   children: PropTypes.element.isRequired,
-
   window: PropTypes.func,
 };
 
@@ -72,13 +71,8 @@ export default function MyNavbar(props) {
           </Typography>
         </Toolbar>
       </AppBar>
-      <Toolbar id="back-to-top-anchor" />
-      <Container>
-        <Box sx={{ my: 2 }}>
-          
-          {/* {[...new Array(10000)].map(() => `lorem50`).join("\n")} */}
-        </Box>
-      </Container>
+      <Toolbar id="back-to-top-anchor" sx={{m:1}}/>
+     
       <Navbar {...props}>
         <Fab color="secondary" size="small" aria-label="scroll back to top">
           <KeyboardArrowUpIcon />

@@ -65,7 +65,7 @@ export default function Register() {
     //     </div>
     //   </div>
 
-  <>
+  
   <Container>
   <CssBaseline />
   <div className="login">
@@ -112,7 +112,7 @@ export default function Register() {
   </div>
   </div>
 </Container>
-</>
+
 
   );
 }

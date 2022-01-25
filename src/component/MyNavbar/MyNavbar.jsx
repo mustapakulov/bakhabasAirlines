@@ -10,12 +10,14 @@ import Container from "@mui/material/Container";
 import Fab from "@mui/material/Fab";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import Zoom from "@mui/material/Zoom";
+import PersonIcon from "@mui/icons-material/Person";
+import FlightIcon from "@mui/icons-material/Flight";
+import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
 
+import logo from "./img/logo.png";
 function Navbar(props) {
   const { children, window } = props;
-  // Note that you normally won't need to set the window ref as useScrollTrigger
-  // will default to window.
-  // This is only being set here because the demo is in an iframe.
+
   const trigger = useScrollTrigger({
     target: window ? window() : undefined,
     disableHysteresis: true,
@@ -50,35 +52,31 @@ function Navbar(props) {
 
 Navbar.propTypes = {
   children: PropTypes.element.isRequired,
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
+
   window: PropTypes.func,
 };
 
-export default function BackToTop(props) {
+export default function MyNavbar(props) {
   return (
     <React.Fragment>
       <CssBaseline />
       <AppBar>
-        <Toolbar>
+        <Toolbar sx={{ justifyContent: "space-between" }}>
           <Typography variant="h6" component="div">
-            Scroll to see button
+            <img width="100" src={logo} alt="logo" />
+          </Typography>
+          <Typography variant="h6" component="div">
+            <FlightIcon sx={{ color: "text.secondary" }} />
+            <LocalGroceryStoreIcon sx={{ color: "text.secondary" }} />
+            <PersonIcon sx={{ color: "text.secondary" }} />
           </Typography>
         </Toolbar>
       </AppBar>
       <Toolbar id="back-to-top-anchor" />
       <Container>
         <Box sx={{ my: 2 }}>
-          {[...new Array(12)]
-            .map(
-              () => `Cras mattis consectetur purus sit amet fermentum.
-Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
-            )
-            .join("\n")}
+          
+          {/* {[...new Array(10000)].map(() => `lorem50`).join("\n")} */}
         </Box>
       </Container>
       <Navbar {...props}>

@@ -1,5 +1,4 @@
 import MyRoutes from "./MyRoutes";
-
 function App() {
   return <MyRoutes />;
 }

@@ -1,8 +1,6 @@
 import MyRoutes from "./MyRoutes";
 function App() {
-  return (
-     <MyRoutes />
-  );
+  return <MyRoutes />;
 }
 
 export default App;

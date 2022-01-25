@@ -1,8 +1,36 @@
-import React from "react";
+import * as React from "react";
 import { Link } from "react-router-dom";
 import "../css/register.css";
+import { createTheme } from "@mui/material/styles";
+import { useNavigate } from "react-router-dom";
+import { tiketContext } from "../../MyContext/MyContext";
 
-const Register = () => {
+const theme = createTheme();
+
+export default function Register() {
+  const { signUp } = React.useContext(tiketContext);
+  const navigate = useNavigate();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    // eslint-disable-next-line no-console
+    console.log({
+      email: data.get("email"),
+      password: data.get("password"),
+    });
+    handleSignUp(data.get("email"), data.get("password"));
+    navigate("/");
+  };
+
+  async function handleSignUp(email, password) {
+    try {
+      await signUp(email, password);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return (
     <div>
       <div className="login">
@@ -35,6 +63,4 @@ const Register = () => {
       </div>
     </div>
   );
-};
-
-export default Register;
+}

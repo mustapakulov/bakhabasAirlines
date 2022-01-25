@@ -35,18 +35,7 @@ export default function Register() {
     }
   }
 
-  return (
-    //   <div className="login">
-    //     <div className="loginContainer">
-    //       <label>Ваша имя:</label>
-    //       <input type="text" autoFocus required />
-    //       <p className="errorMsg"></p>
-    //       <label>Ваш пароль:</label>
-    //       <input type="password" required />
-    //       <div className="btnContainer">
-    //         <Link to="/register">
-    //         <button onClick>Регистрация</button>
-    //         </Link>
+
 
     //         <p>
     //           Don't have an account?
@@ -112,6 +101,12 @@ export default function Register() {
   </div>
   </div>
 </Container>
+
+            <p>
+              Don't have an account?
+              <span>Вход в аккаунт qweqweqwe</span>
+            </p>
+
 
 
   );

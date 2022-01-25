@@ -47,7 +47,7 @@ export default function Register() {
 
             <p>
               Don't have an account?
-              <span>Вход в аккаунт qweqweqwe</span>
+              <span>Вход в аккаунт</span>
             </p>
 
             <Link to="/login">

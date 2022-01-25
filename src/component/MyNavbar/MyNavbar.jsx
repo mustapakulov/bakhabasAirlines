@@ -57,7 +57,7 @@ ScrollTop.propTypes = {
   window: PropTypes.func,
 };
 
-export default function BackToTop(props) {
+export default function MyNavbar(props) {
   return (
     <React.Fragment>
       <CssBaseline />

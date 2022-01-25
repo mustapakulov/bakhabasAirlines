@@ -4,8 +4,12 @@ import "../css/register.css";
 import { createTheme } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
 import { tiketContext } from "../../MyContext/MyContext";
+import { ThemeProvider } from "@emotion/react";
+import { Avatar, Button, Container, CssBaseline, Grid, TextField, Typography } from "@mui/material";
+import { Box } from "@mui/system";
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 
-const theme = createTheme();
+// const theme = createTheme();
 
 export default function Register() {
   const { signUp } = React.useContext(tiketContext);
@@ -31,36 +35,79 @@ export default function Register() {
     }
   }
 
-  return (
-    <div>
-      <div className="login">
-        <div className="loginContainer">
-          <label>Ваша имя:</label>
-          <input type="text" autoFocus required />
-          <p className="errorMsg">qwert</p>
-          <label>Ваш пароль:</label>
-          <input type="password" required />
-          <div className="btnContainer">
-            <Link to="/register">
-              <button onClick>Регистрация</button>
-            </Link>
+
+
+    //         <p>
+    //           Don't have an account?
+    //           <span>Вход в аккаунт</span>
+    //         </p>
+
+    //         <Link to="/register">
+    //           <button type="submit" >Вход в аккаунт</button>
+    //         </Link>
+
+    //         <p>
+    //           Have an account?
+    //           <span>Регистрация</span>
+    //         </p>
+    //       </div>
+    //     </div>
+    //   </div>
+
+  
+  <Container>
+  <CssBaseline />
+  <div className="login">
+    <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+      <LockOutlinedIcon />
+    </Avatar>
+  <div className="loginContainer">
+
+    <Typography component="h1" variant="h5">
+      Sign up
+    </Typography>
+    <Box component="form" noValidate onSubmit={handleSubmit} >
+      <Grid container spacing={2}>
+        <Grid item xs={12}>
+          <TextField
+            required
+            fullWidth
+            id="email"
+            // label="Email Address"
+            name="email"
+            autoComplete="email"
+          />
+        </Grid>
+        <Grid item xs={12}>
+          <TextField
+            required
+            fullWidth
+            name="password"
+            // label="Password"
+            type="password"
+            id="password"
+            autoComplete="new-password"
+          />
+        </Grid>
+      </Grid>
+      <button
+        type="submit"
+      >
+        Sign Up
+      </button>
+      <Grid container justifyContent="flex-end">
+      </Grid>
+    </Box>
+  </div>
+  </div>
+</Container>
 
             <p>
               Don't have an account?
               <span>Вход в аккаунт qweqweqwe</span>
             </p>
 
-            <Link to="/login">
-              <button>Вход в аккаунт</button>
-            </Link>
 
-            <p>
-              Have an account?
-              <span>Регистрация</span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+
   );
 }

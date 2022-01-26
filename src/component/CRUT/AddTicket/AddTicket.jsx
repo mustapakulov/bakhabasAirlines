@@ -25,7 +25,7 @@ const AddTicket = () => {
     }
     const handleSave = () => {
       addTiket({...values, price: +values.price}) 
-      navigate('/')
+      navigate('/list')
     }
 
   return (
@@ -47,13 +47,13 @@ const AddTicket = () => {
     <Paper elevation={3} >
       <h1 style={{textAlign: 'center', color: 'yellow'}}>Add product</h1>
       <div style={{display: 'flex', justifyContent: 'space-around', color: 'black'}}>
-           <div>
+           {/* <div>
             <img 
              style={{width: '400px'}} 
              src={values.photo ? 
              values.photo: 'https://99px.ru/sstorage/53/2012/03/mid_38740_8221.jpg'} 
              alt="img product" />
-           </div>
+           </div> */}
           <div
                 style={{
                 width: '450px',

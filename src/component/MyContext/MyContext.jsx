@@ -67,6 +67,7 @@ const MyContext = (props) => {
     useAuth()
     return (
        <tiketContext.Provider value={{
+        tiket: state.tiket,
         //  sign
         signUp,
         signIn,

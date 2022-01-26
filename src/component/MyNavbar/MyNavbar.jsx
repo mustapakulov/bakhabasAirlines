@@ -6,7 +6,6 @@ import Typography from "@mui/material/Typography";
 import CssBaseline from "@mui/material/CssBaseline";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Box from "@mui/material/Box";
-// import Container from "@mui/material/Container";
 import Fab from "@mui/material/Fab";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import Zoom from "@mui/material/Zoom";
@@ -14,7 +13,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import FlightIcon from "@mui/icons-material/Flight";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
 
-import logo from "./img/logo.png";
+import logo from "./img/LOGO.png";
 function Navbar(props) {
   const { children, window } = props;
 
@@ -71,8 +70,8 @@ export default function MyNavbar(props) {
           </Typography>
         </Toolbar>
       </AppBar>
-      <Toolbar id="back-to-top-anchor" sx={{m:1}}/>
-     
+      <Toolbar id="back-to-top-anchor" sx={{ m: 1 }} />
+
       <Navbar {...props}>
         <Fab color="secondary" size="small" aria-label="scroll back to top">
           <KeyboardArrowUpIcon />

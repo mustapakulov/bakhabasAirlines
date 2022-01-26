@@ -6,6 +6,7 @@ import DisplayCard from "./component/CRUT/DisolayCard/DisplayCard";
 import KaruselNavigate from "./component/Karuselnav/KaruselNavigate";
 import AddTicket from "./component/CRUT/AddTicket/AddTicket";
 import DisplayList from "./component/CRUT/DisplayList/DisplayList";
+import EditTiket from "./component/CRUT/EditTiket/EditTiket";
 import MyContextProvider from "./component/MyContext/MyContext";
 import MyNavbar from "./component/MyNavbar/MyNavbar";
 const MyRoutes = () => {
@@ -21,6 +22,7 @@ const MyRoutes = () => {
           <Route path="/display" element={<DisplayCard />} />
           <Route path="/Karusel" element={<KaruselNavigate />} />
           <Route path='/list' element={<DisplayList/>} />
+          <Route path='/list/edit/:id' element={<EditTiket/>} />
         </Routes>
       </BrowserRouter>
     </MyContextProvider>

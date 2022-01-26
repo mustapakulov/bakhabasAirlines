@@ -2,24 +2,10 @@
   "tiket": [
     {
       "photo": "https://upload.wikimedia.org/wikipedia/commons/4/47/New_york_times_square-terabass.jpg",
-      "town": "new york",
+      "town": "newYouk",
       "price": 100,
       "describetion": "Таймс-сквер (англ. Times Square) — площадь в центральной части Манхэттена в городе Нью-Йорке в США, расположенная на пересечении Бродвея и Седьмой авеню в промежутке между 42-й и 47-й улицами. Центр Театрального квартала Нью-Йорка.  Площадь, прежде именовавшаяся Лонгакр-сквер (англ. Longacre square), получила своё современное название в апреле 1904 года, когда газета «Нью-Йорк Таймс» перенесла свою штаб-квартиру в накануне построенное здание Times Building (ныне Уан-Таймс-Сквер). В 1907 году на его крыше был установлен шар времени, ежегодный спуск которого наблюдает около миллиона зрителей.  Таймс-сквер является одной из самых посещаемых достопримечательностей мира, привлекающей около 50 миллионов посетителей ежегодно. Площадь называют «перекрёстком мира», она ежедневно пропускает через себя более 300 тысяч пешеходов и 115 тысяч водителей и пассажиров, на ней работает 170 тысяч человек. Таймс-сквер является символом Нью-Йорка и всех Соединённых Штатов[1].",
       "id": 1
-    },
-    {
-      "photo": "https://i.natgeofe.com/n/6c02ad5a-977b-4f12-b9c0-02ffb0736e07/metropolitan-cathedral-zocalo-mexico-city_16x9.JPG",
-      "town": "Mexico",
-      "price": 200,
-      "describetion": "Built on the ruins of the ancient Aztec city of Tenochtitlan, Mexico City is one of the oldest and largest cities in the Americas. Colonial architecture, iconic artwork, spicy cuisine, and a rich cultural heritage offer visitors an endless array of activities that will satisfy any appetite.  Centro Histórico: City of Palaces The Aztecs built their empire on Lake Texcoco in the Valley of Mexico—a great island city connected by canals and protected by fortresses. When Spanish conquerors arrived in Tenochtitlan in the 16th century, they destroyed the island, drained the lake, and constructed a “city of palaces” over the ruins. Past and present blend together in the 10-acre Historic Center of Mexico City—its museums, cathedrals, and temples reveal a storied past. The Zócalo, the city’s main public square, is second largest in the world after Moscow’s Red Square and within a short distance of several significant sites. Highlights include the Palacio Nacional, home to the president’s offices. The colonial building is located at the site where the palace of the Aztec ruler Moctezuma once stood, and it’s decorated with murals by Mexican artist Diego Rivera. The Mexico City Metropolitan Cathedral, built over a period of more than 200 years, is the largest in the Americas and combines ",
-      "id": 2
-    },
-    {
-      "photo": "https://i.natgeofe.com/n/6c02ad5a-977b-4f12-b9c0-02ffb0736e07/metropolitan-cathedral-zocalo-mexico-city_16x9.JPG",
-      "town": "Mexico",
-      "price": 2000,
-      "describetion": "Built on the ruins of the ancient Aztec city of Tenochtitlan, Mexico City is one of the oldest and largest cities in the Americas. Colonial architecture, iconic artwork, spicy cuisine, and a rich cultural heritage offer visitors an endless array of activities that will satisfy any appetite.  Centro Histórico: City of Palaces The Aztecs built their empire on Lake Texcoco in the Valley of Mexico—a great island city connected by canals and protected by fortresses. When Spanish conquerors arrived in Tenochtitlan in the 16th century, they destroyed the island, drained the lake, and constructed a “city of palaces” over the ruins. Past and present blend together in the 10-acre Historic Center of Mexico City—its museums, cathedrals, and temples reveal a storied past. The Zócalo, the city’s main public square, is second largest in the world after Moscow’s Red Square and within a short distance of several significant sites. Highlights include the Palacio Nacional, home to the president’s offices. The colonial building is located at the site where the palace of the Aztec ruler Moctezuma once stood, and it’s decorated with murals by Mexican artist Diego Rivera. The Mexico City Metropolitan Cathedral, built over a period of more than 200 years, is the largest in the Americas and combines ",
-      "id": 3
     }
   ]
 }

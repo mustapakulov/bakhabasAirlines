@@ -1,4 +1,4 @@
-import { Box, Grid, Pagination, Paper, Stack, styled } from '@mui/material';
+import { Box, Grid, Pagination, Paper, Stack} from '@mui/material';
 import React, { useContext, useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { tiketContext } from '../../MyContext/MyContext';
@@ -21,7 +21,7 @@ const  DisplayList = () => {
     useEffect(()=> {
        getTiket()
     },[])
-
+console.log('hrllp0');
     useEffect(()=> {
         setSearchParams({
             '_limit': limit,

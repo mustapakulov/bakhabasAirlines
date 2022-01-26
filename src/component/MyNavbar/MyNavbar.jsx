@@ -12,8 +12,7 @@ import Zoom from "@mui/material/Zoom";
 import PersonIcon from "@mui/icons-material/Person";
 import FlightIcon from "@mui/icons-material/Flight";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
-
-import logo from "./img/LOGO.png";
+import logo from "./img/logo.png";
 function Navbar(props) {
   const { children, window } = props;
 

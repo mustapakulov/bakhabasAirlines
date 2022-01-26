@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "../Footer/Footer";
+import FoterFrom from "../Footer/FooterFrom";
 import HeadersHome from "../HeadersHome/HeadersHome";
 import Journey from "../Journey/Journey";
 import KaruselNavigate from "../Karuselnav/KaruselNavigate";
@@ -10,7 +10,7 @@ const Home = () => {
       <HeadersHome />
       <KaruselNavigate />
       <Journey />
-      <Footer/>
+      <FoterFrom/>
     </div>
   );
 };

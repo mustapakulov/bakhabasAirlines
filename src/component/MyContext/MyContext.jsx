@@ -5,6 +5,7 @@ import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndP
 import { auth } from '../../Firebase';
 import axios from 'axios';
 import { API } from '../../Halpers'
+import { Icons, toast } from 'react-toastify'
 
 export const tiketContext = createContext()
 
@@ -29,8 +30,10 @@ const MyContext = (props) => {
         try {
             let res = await axios.post(API, newTiket)
             getTiket()
+            toast.success("oops", {icon: '🚀'})
+            return res
         } catch (error) {
-            // ! toastify
+            toast.error(error)
         }
     }
     // ! read

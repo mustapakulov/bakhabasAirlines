@@ -5,23 +5,28 @@ import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndP
 import { auth } from '../../Firebase';
 import axios from 'axios';
 import { API } from '../../Halpers'
-import { Icons, toast } from 'react-toastify'
+import {  toast } from 'react-toastify'
 
 export const tiketContext = createContext()
 
 const INIT_STATE = {
    tiket: null,
-   edit: null
+   edit: null,
+   paginatedPages: 1,
 }
 const reducer = (state = INIT_STATE, action) => {
     switch(action.type) {
         case "GET_TIKET" :
-            return {...state, tiket: action.payload}
+            return {
+                ...state, tiket: action.payload.data,
+                paginatedPages: Math.ceil(action.payload.headers["x-total-count"] / 6)
+            };
         case "EDIT_TIKET":
             return {...state, edit: action.payload}
         default : return state
     }
 }
+
 
 const MyContext = (props) => {
     const [state, dispatch] = useReducer(reducer, INIT_STATE)
@@ -42,7 +47,7 @@ const MyContext = (props) => {
            let res = await axios(API)
            let action = {
                type: "GET_TIKET",
-               payload: res.data
+               payload: res
            } 
            dispatch(action)
         } catch (error) {
@@ -104,21 +109,22 @@ const MyContext = (props) => {
     }
     useAuth()
     return (
-       <tiketContext.Provider value={{
-        tiket: state.tiket,
-        edit: state.edit,
-        //  sign
-        signUp,
-        signIn,
-        logout,
-        useAuth,
-        // Crud
-        addTiket,
-        getTiket,
-        editTiket,
-        saveEditTiket,
-        deleteTiket,
-        // 
+        <tiketContext.Provider value={{
+            tiket: state.tiket,
+            edit: state.edit,
+            //  sign
+            signUp,
+            signIn,
+            logout,
+            useAuth,
+            // Crud
+            addTiket,
+            getTiket,
+            editTiket,
+            saveEditTiket,
+            deleteTiket,
+            // pagi
+            paginatedPages: state.paginatedPages,
        }}>
            {props.children}
        </tiketContext.Provider>

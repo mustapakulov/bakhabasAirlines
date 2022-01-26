@@ -19,13 +19,13 @@ export default function DisplayCard({ item }) {
         alt="green iguana"
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        {/* <Typography gutterBottom variant="h5" component="div">
           {item.photo}
-        </Typography>
-        <Typography variant="body2" color="text.secondary"  sx={{pt:1,pb:1}}>
+        </Typography> */}
+        <Typography variant="h4" color="text.secondary"  sx={{pt:1,pb:1}}>
           {item.town}
         </Typography>
-        <Typography variant="body2" color="text.secondary" sx={{pt:1,pb:1}}>
+        <Typography variant="a" color="text.secondary" sx={{pt:1,pb:1}}>
           {item.price}
         </Typography>
         <Typography variant="body2" color="text.secondary" sx={{pt:1,pb:1}}>

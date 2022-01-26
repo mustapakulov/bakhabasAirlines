@@ -20,9 +20,9 @@ const MyRoutes = () => {
           <Route path="/add" element={<AddTicket />} />
           <Route path="/login" element={<Login />} />
           <Route path="/display" element={<DisplayCard />} />
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/list" element={<DisplayList />} />
-          <Route path="/list/edit/:id" element={<EditTiket />} />
+          <Route path="/edit/:id" element={<EditTiket />} />
         </Routes>
       </BrowserRouter>
     </MyContextProvider>

@@ -9,7 +9,6 @@ import {
   CardMedia,
   Typography,
   Grid,
-  Button,
 } from "@material-ui/core";
 
 function Banner(props) {
@@ -27,10 +26,6 @@ function Banner(props) {
         <Typography className="Title">{props.item.Name}</Typography>
 
         <Typography className="Caption">{props.item.Caption}</Typography>
-
-        <Button variant="outlined" className="ViewButton">
-          View Now
-        </Button>
       </CardContent>
     </Grid>
   );
@@ -68,47 +63,76 @@ function Banner(props) {
 
 const items = [
   {
-    Name: "Pizza begin",
-    Image: "https://source.unsplash.com/featured/?macbook",
+    Name: "Париж",
+    Caption: "Город любви!",
+    Image:
+      "https://yandex.ru/images/search?pos=2&img_url=https%3A%2F%2Fimg3.goodfon.com%2Foriginal%2F5416x3611%2Fc%2Fdc%2Fparizh-franciya-noch-ogni-2465.jpg&text=paris&rpt=simage",
     contentPosition: "left",
     Items: [
       {
-        Name: "Macbook Pro",
-        Image: "https://source.unsplash.com/featured/?macbook",
+        Image: "https://i.ytimg.com/vi/3TxDZbjOnnw/maxresdefault.jpg",
       },
       {
-        Name: "iPhone",
-        Image: "https://source.unsplash.com/featured/?iphone",
+        Image:
+          "http://cdn.lightgalleries.net/4bd5ec0f44d0a/images/paris_2014_011-1.jpg",
       },
     ],
   },
   {
-    Name: "Home Appliances",
-    Caption: "Say no to manual home labour!",
+    Name: "New Yourk",
+    Caption: "Финансовый город!",
     contentPosition: "middle",
     Items: [
       {
-        Name: "Washing Machine WX9102",
-        Image: "https://source.unsplash.com/featured/?washingmachine",
+        Image:
+          "https://cdn.viewing.nyc/assets/media/55cffa315520cfeab6626f71ee9fb2b0/elements/35fd3b889d5affff41dae616a969e840/xl/5f992681-db6d-4741-b611-8006ad158a82_4x.jpg",
       },
       {
-        Name: "Learus Vacuum Cleaner",
-        Image: "https://source.unsplash.com/featured/?vacuum,cleaner",
+        Image:
+          "https://wpcluster.dctdigital.com/sundaypost/wp-content/uploads/sites/13/2016/09/28582727.jpg",
       },
     ],
   },
   {
-    Name: "Decoratives",
-    Caption: "Give style and color to your living room!",
+    Name: "Сингапур",
+    Caption: "Cамое время полететь в Сигапур!",
     contentPosition: "right",
     Items: [
       {
-        Name: "Living Room Lamp",
-        Image: "https://source.unsplash.com/featured/?lamp",
+        Image:
+          "https://avatars.mds.yandex.net/get-zen_doc/3644482/pub_607fd6d2a17092441498ab6c_607fd93aba83cd2567dcfc11/scale_1200",
       },
       {
-        Name: "Floral Vase",
-        Image: "https://source.unsplash.com/featured/?vase",
+        Image:
+          "https://avatars.mds.yandex.net/get-zen_doc/1931555/pub_5eb278697196c61aab11b0ee_5eb27ae45d462a32492c44bd/scale_1200",
+      },
+    ],
+  },
+  {
+    Name: "Ыссык-кол",
+    Caption: "Жемчужина Кыргызстана!",
+    Items: [
+      {
+        Image:
+          "https://avatars.mds.yandex.net/i?id=ba55994eab196debae60b19b82c4f88f-4507927-images-thumbs&n=13",
+      },
+      {
+        Image:
+          "https://avatars.mds.yandex.net/i?id=def3203af256310bcb83d73c63ba1cfb-4407994-images-thumbs&n=13",
+      },
+    ],
+  },
+  {
+    Name: "Корея",
+    Caption: "Крассивый город для отдыха глаз!",
+    contentPosition: "middle",
+    Items: [
+      {
+        Image: "https://offshoreview.eu/wp-content/uploads/2016/08/43053.jpg",
+      },
+      {
+        Image:
+          "https://mywishboard.com/thumbs/wish/f/u/n/1020x0_jsmojfmbrrywcivr_jpg_bc5b.jpg",
       },
     ],
   },

@@ -3,14 +3,9 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { tiketContext } from '../../MyContext/MyContext';
 import DisplayCard from '../DisolayCard/DisplayCard';
+import { experimentalStyled as styled } from '@mui/material/styles';
 
 
-const Item = styled(Paper)(({ theme }) => ({
-    ...theme.typography.body2,
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  }));
 
 const  DisplayList = () => {
     const { tiket, getTiket, paginatedPages } = useContext(tiketContext)
@@ -21,7 +16,6 @@ const  DisplayList = () => {
     useEffect(()=> {
        getTiket()
     },[])
-console.log('hrllp0');
     useEffect(()=> {
         setSearchParams({
             '_limit': limit,

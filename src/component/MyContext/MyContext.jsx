@@ -44,7 +44,7 @@ const MyContext = (props) => {
     // ! read
     const getTiket = async () => {
         try {
-           let res = await axios(API)
+           let res = await axios(`${API}/${window.location.search}`)
            let action = {
                type: "GET_TIKET",
                payload: res

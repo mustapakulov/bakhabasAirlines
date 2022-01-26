@@ -9,12 +9,16 @@ import { API } from '../../Halpers'
 export const tiketContext = createContext()
 
 const INIT_STATE = {
-   tiket: null
+   tiket: null,
+   edit: null
 }
 const reducer = (state = INIT_STATE, action) => {
     switch(action.type) {
         case "GET_TIKET" :
             return {...state, tiket: action.payload}
+        case "EDIT_TIKET":
+            return {...state, edit: action.payload}
+        default : return state
     }
 }
 
@@ -42,7 +46,38 @@ const MyContext = (props) => {
             // ! Error
         }
     }
-
+    // ! edit || update
+    const editTiket = async (id) => {
+        try {
+            let { data } = await axios(`${API}/${id}`)
+            let action = {
+                type: 'EDIT_TIKET',
+                payload: data
+            }
+            dispatch(action)
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    // ! save 
+    const saveEditTiket =  async (editedTiket) => {
+        try {
+            await axios.patch(`${API}/${editedTiket.id}`, editedTiket)
+            getTiket()
+        } catch (error) {
+            
+        }
+    }
+    // ! delete 
+    const deleteTiket = async (id) => {
+        try {
+            await axios.delete(`${API}/${id}`)
+            getTiket()
+        } catch (error) {
+            // ! toastify
+            console.log(error);
+        }
+    }
     //  ! signIn/signUp
     function signUp (email, password) {
        return createUserWithEmailAndPassword(auth, email, password)
@@ -68,6 +103,7 @@ const MyContext = (props) => {
     return (
        <tiketContext.Provider value={{
         tiket: state.tiket,
+        edit: state.edit,
         //  sign
         signUp,
         signIn,
@@ -75,7 +111,11 @@ const MyContext = (props) => {
         useAuth,
         // Crud
         addTiket,
-        getTiket
+        getTiket,
+        editTiket,
+        saveEditTiket,
+        deleteTiket,
+        // 
        }}>
            {props.children}
        </tiketContext.Provider>

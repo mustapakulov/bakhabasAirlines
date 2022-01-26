@@ -5,8 +5,11 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { Link } from "react-router-dom";
+import { tiketContext } from "../../MyContext/MyContext";
 
 export default function DisplayCard({ item }) {
+  const { deleteTiket} = React.useContext(tiketContext)
   return (
     <Card sx={{ maxWidth: 350,minWidth: 300, margin:2}}>
       <CardMedia
@@ -32,6 +35,10 @@ export default function DisplayCard({ item }) {
       <CardActions>
         <Button size="small">Сохраненить</Button>
         <Button size="small">Купить</Button>
+        <Link to={`edit/${item.id}`}>
+        <Button size="small" >Edit</Button>
+        </Link>
+        <Button size="small"  onClick={() => deleteTiket(item.id)}>Delete</Button>
       </CardActions>
     </Card>
   );

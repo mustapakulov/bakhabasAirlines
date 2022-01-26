@@ -44,10 +44,11 @@
   padding: 30px;
   transition: 300ms;
 }
+/* .makeStyles-indicators-4
 .Banner .Content:hover,
 .Banner .Content:active {
   background-color: tomato;
-}
+} */
 .Banner .Content:hover .ViewButton,
 .Banner .Content:active .ViewButton {
   background-color: white;
@@ -63,7 +64,7 @@
 }
 .Banner .Content .ViewButton {
   margin-top: 40px;
-  color: white;
+  color: white;   
   font-size: 24px;
   border: 3px solid white;
   text-transform: capitalize;

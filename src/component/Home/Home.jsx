@@ -1,5 +1,4 @@
 import React from "react";
-import DisplayList from "../CRUT/DisplayList/DisplayList";
 import HeadersHome from "../HeadersHome/HeadersHome";
 import KaruselNavigate from "../Karuselnav/KaruselNavigate";
 
@@ -8,7 +7,6 @@ const Home = () => {
     <div>
       <HeadersHome />
       <KaruselNavigate />
-      <DisplayList />
     </div>
   );
 };

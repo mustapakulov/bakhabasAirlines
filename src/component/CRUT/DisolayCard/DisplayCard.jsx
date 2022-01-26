@@ -22,7 +22,7 @@ export default function DisplayCard() {
         <Typography variant="body2" color="text.secondary"  sx={{pt:1,pb:1}}>
           {`описание`}
         </Typography>
-        <Typography variant="body2" color="text.secondary" sx={{pt:1,pb:1}}>
+         <Typography variant="body2" color="text.secondary" sx={{pt:1,pb:1}}>
           {`Цена`}
         </Typography>
         <Typography variant="body2" color="text.secondary" sx={{pt:1,pb:1}}>

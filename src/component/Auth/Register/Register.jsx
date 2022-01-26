@@ -78,8 +78,8 @@ export default function Register() {
               <>
                 <Grid container justifyContent="flex-end" sx={{ mt: 2 }}>
                   {" "}
-                  <p className="labelRegister"> У вас есть аккаунт? </p>
-                  <Link to="/register">
+                  {/* <p className="labelRegister"> У вас есть аккаунт? </p> */}
+                  <Link to="/login">
                     <button type="submit">Вход в аккаунт</button>
                   </Link>{" "}
                 </Grid>

@@ -1,23 +1,8 @@
-/* * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Nunito", sans-serif;
-  } */
-
-button {
-  border: none;
-  outline: none;
-  width: 100%;
-  padding: 15px 0;
-  color: #fff;
-  font-size: 16px;
-  letter-spacing: 1px;
-  background: #603bbb;
-  cursor: pointer;
-}
-
-.login {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
 }
 
 .login .loginContainer {
@@ -29,12 +14,12 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* background: radial-gradient(
+  background: radial-gradient(
     ellipse at left bottom,
     rgba(22, 24, 47, 1) 0%,
     rgba(38, 20, 72, 0.9) 59%,
     rgba(17, 27, 75, 0.9) 100%
-  ); */
+  );
   background-size: cover;
   background-image: url(https://avatars.mds.yandex.net/get-zen_doc/1532998/pub_5da29a081febd402a85dda8f_5da29d5ea06eaf00b224d964/scale_1200),
     none;
@@ -120,6 +105,6 @@ button {
   background: #3a2b58;
 }
 
-.labelRegister{
-  padding:0 10px;
+.labelRegister {
+  padding: 0 10px;
 }

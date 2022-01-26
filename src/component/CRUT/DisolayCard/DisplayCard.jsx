@@ -6,27 +6,27 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-export default function DisplayCard() {
+export default function DisplayCard({ item }) {
   return (
     <Card sx={{ maxWidth: 350,minWidth: 300, margin:2}}>
       <CardMedia
         component="img"
         height="140"
-        image="https://ideacluber.ru/uploads/s/9/p/s/9psidbib2tqd/img/full_NHAk5tvM.jpg"
+        image={item.photo}
         alt="green iguana"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          {`Город`}
+          {item.photo}
         </Typography>
         <Typography variant="body2" color="text.secondary"  sx={{pt:1,pb:1}}>
-          {`описание`}
-        </Typography>
-         <Typography variant="body2" color="text.secondary" sx={{pt:1,pb:1}}>
-          {`Цена`}
+          {item.town}
         </Typography>
         <Typography variant="body2" color="text.secondary" sx={{pt:1,pb:1}}>
-          {`Время`}
+          {item.price}
+        </Typography>
+        <Typography variant="body2" color="text.secondary" sx={{pt:1,pb:1}}>
+          {item.describetion}
         </Typography>
       </CardContent>
       <CardActions>

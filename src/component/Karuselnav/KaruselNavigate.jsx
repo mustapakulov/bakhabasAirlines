@@ -12,8 +12,6 @@ import {
   Button,
 } from "@material-ui/core";
 
-
-
 function Banner(props) {
   if (props.newProp) console.log(props.newProp);
   const contentPosition = props.contentPosition
@@ -178,8 +176,6 @@ class KaruselNavigate extends React.Component {
   render() {
     return (
       <div style={{ marginTop: "50px", color: "#494949" }}>
-        <h2>3 Items layout - StackOverflow - Yotam</h2>
-
         <Carousel
           className="Example"
           autoPlay={this.state.autoPlay}

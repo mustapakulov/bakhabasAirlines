@@ -19,9 +19,6 @@ export default function DisplayCard({ item }) {
         alt="green iguana"
       />
       <CardContent>
-        {/* <Typography gutterBottom variant="h5" component="div">
-          {item.photo}
-        </Typography> */}
         <Typography variant="h4" color="text.secondary"  sx={{pt:1,pb:1}}>
           {item.town}
         </Typography>

@@ -43,7 +43,7 @@ const DisplayList = () => {
         '_page': 1
       })
     }, [searchVal])
-
+   console.log('dkfmm');
     const handleValue = (e) => {
       const search = URLSearchParams(window.location.search)
       search.set('q', e.target.value)

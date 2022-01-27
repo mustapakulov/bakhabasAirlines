@@ -1,10 +1,10 @@
-import * as React from 'react';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
+import * as React from "react";
+import ImageList from "@mui/material/ImageList";
+import ImageListItem from "@mui/material/ImageListItem";
 
 export default function FoterFrom() {
   return (
-    <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
+    <ImageList cols={2}>
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
           <img
@@ -21,72 +21,29 @@ export default function FoterFrom() {
 
 const itemData = [
   {
-    img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
-    title: 'Breakfast',
+    img: "https://bestvietnam.ru/wp-content/uploads/2020/08/%D0%90%D1%8D%D1%80%D0%BE%D0%BF%D0%BE%D1%80%D1%82-%D0%A8%D0%B8%D0%BB%D0%BC%D0%B0.jpg",
+    title: "Aэропорт",
   },
   {
-    img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
-    title: 'Burger',
+    img: "https://avatars.mds.yandex.net/get-zen_doc/2046228/pub_5ead1f8813284a1c24114ad5_5eae5dc46451301d9a35fd79/scale_1200",
+    title: "Aэропорт",
   },
   {
-    img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
-    title: 'Camera',
+    img: "https://cryptoblogers.ru/wp-content/uploads/2018/01/Airport_top.jpg",
+    title: "Aэропорт",
   },
   {
-    img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
-    title: 'Coffee',
+    img: "https://traveltimes.ru/wp-content/uploads/2021/07/problemy-turistov-1536x1024.jpg",
+    title: "Coffee",
   },
   {
-    img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
-    title: 'Hats',
+    img: "https://avatars.mds.yandex.net/get-zen_doc/1704910/pub_60eee7ea802f9759346863b3_60eee821b8472c038c3a08c0/scale_1200",
+    title: "Hats",
   },
   {
-    img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
-    title: 'Honey',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
-    title: 'Basketball',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
-    title: 'Fern',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
-    title: 'Mushrooms',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
-    title: 'Tomato basil',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1471357674240-e1a485acb3e1',
-    title: 'Sea star',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1589118949245-7d38baf380d6',
-    title: 'Bike',
+    img: "https://im0-tub-ru.yandex.net/i?id=bd040d7aaca7f18a906b0583b21a38ee-l&ref=rim&n=13&w=640&h=640",
+    title: "Honey",
   },
 ];
 
 
-// import React from "react";
-// import { AppBar, Toolbar, Typography, Grid } from "@material-ui/core";
-
-// const Footer = () => (
-//   <>
-//     <Grid container justify="center" style={{ minHeight: "212px" }}>
-//       <Grid container item sm={6} xs={11} justify="space-between">
-        
-//       </Grid>
-//     </Grid>
-//     <AppBar position="static" elevation={0} component="footer" color="default">
-//       <Toolbar style={{ justifyContent: "center" }}>
-//         <Typography variant="caption">©2020</Typography>
-//       </Toolbar>
-//     </AppBar>
-//   </>
-// );
-
-// export default Footer;

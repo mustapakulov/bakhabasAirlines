@@ -1,4 +1,5 @@
 import React from "react";
+import FooterFot from "../Footer/FooterFot";
 import FoterFrom from "../Footer/FooterFrom";
 import HeadersHome from "../HeadersHome/HeadersHome";
 import Journey from "../Journey/Journey";
@@ -11,6 +12,7 @@ const Home = () => {
       <KaruselNavigate />
       <Journey />
       <FoterFrom/>
+      <FooterFot />
     </div>
   );
 };

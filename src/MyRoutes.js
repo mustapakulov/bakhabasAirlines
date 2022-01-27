@@ -20,7 +20,7 @@ const MyRoutes = () => {
           <Route path="/add" element={<AddTicket />} />
           <Route path="/login" element={<Login />} />
           <Route path="/display" element={<DisplayCard />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/list" element={<DisplayList />} />
           <Route path="/edit/:id" element={<EditTiket />} />
         </Routes>

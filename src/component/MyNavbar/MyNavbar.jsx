@@ -70,7 +70,6 @@ export default function MyNavbar(props) {
         </Toolbar>
       </AppBar>
       <Toolbar id="back-to-top-anchor" sx={{ m: 1 }} />
-
       <Navbar {...props}>
         <Fab color="secondary" size="small" aria-label="scroll back to top">
           <KeyboardArrowUpIcon />

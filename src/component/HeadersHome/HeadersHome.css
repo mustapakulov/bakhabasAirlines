@@ -1,18 +1,25 @@
-* {
+/* * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Nunito", sans-serif;
+} */
+video {
+  width: 100%;
+  background-size: cover;
+  z-index: -999;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
 }
 
-.login .loginContainers {
+/* .login .loginContainers {
   padding: 60px;
   margin: auto;
   width: 100%;
-  /* max-width: 520px; */
   min-height: 600px;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: center;
   background: radial-gradient(
     ellipse at left bottom,
@@ -25,9 +32,9 @@
     none;
   background-repeat: no-repeat;
   box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.8);
-}
+} */
 
-.login .loginContainers label {
+/* .login .loginContainers label {
   color: white;
   margin: 14px 0;
   display: block;
@@ -108,3 +115,9 @@
 .labelRegister {
   padding: 0 10px;
 }
+
+li {
+  text-decoration: none;
+  list-style: none;
+  padding: 4px;
+} */

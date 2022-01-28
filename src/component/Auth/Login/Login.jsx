@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { tiketContext } from "../../MyContext/MyContext";
 import { blue } from "@mui/material/colors";
 import {
+  Button,
   Container,
   CssBaseline,
   Grid,
@@ -44,7 +45,7 @@ export default function Login() {
       <div className="login">
         <div className="loginContainer">
           <Typography component="h1" variant="h5" color={color}>
-          Вход в аккаунт
+            Вход в аккаунт
           </Typography>
           <Box component="form" noValidate onSubmit={handleSubmit}>
             <Grid container spacing={2}>
@@ -73,14 +74,18 @@ export default function Login() {
             </Grid>
             <div className="btnContainer">
               <>
-              <button type="submit">Вход в аккаунт</button>
+                <Button variant="contained" color="success" type="submit">
+                  Вход в аккаунт
+                </Button>
               </>
               <>
                 <Grid container justifyContent="flex-end" sx={{ mt: 2 }}>
                   {" "}
                   {/* <p className="labelRegister"> У вас есть аккаунт? </p> */}
                   <Link to="/register">
-                  <button >Регистрация</button>
+                    <Button variant="contained" color="success">
+                      Регистрация
+                    </Button>
                   </Link>{" "}
                 </Grid>
               </>

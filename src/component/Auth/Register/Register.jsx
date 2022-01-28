@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { tiketContext } from "../../MyContext/MyContext";
 import { blue } from "@mui/material/colors";
 import {
+  Button,
   Container,
   CssBaseline,
   Grid,
@@ -73,14 +74,18 @@ export default function Register() {
             </Grid>
             <div className="btnContainer">
               <>
-                <button type="submit">Регистрация</button>
+                <Button variant="contained" color="success" type="submit">
+                  Регистрация
+                </Button>
               </>
               <>
                 <Grid container justifyContent="flex-end" sx={{ mt: 2 }}>
                   {" "}
                   {/* <p className="labelRegister"> У вас есть аккаунт? </p> */}
                   <Link to="/login">
-                    <button type="submit">Вход в аккаунт</button>
+                    <Button variant="contained" color="success" type="submit">
+                      Вход в аккаунт
+                    </Button>
                   </Link>{" "}
                 </Grid>
               </>

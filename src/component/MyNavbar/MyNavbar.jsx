@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
@@ -9,10 +9,18 @@ import Box from "@mui/material/Box";
 import Fab from "@mui/material/Fab";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import Zoom from "@mui/material/Zoom";
-import PersonIcon from "@mui/icons-material/Person";
-import FlightIcon from "@mui/icons-material/Flight";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
 import logo from "./img/logo.png";
+import { tiketContext } from "../MyContext/MyContext";
+import { Badge, IconButton } from "@mui/material";
+import { Link } from "react-router-dom";
+import HomeIcon from "@mui/icons-material/Home";
+import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
+import "../Cart/cart.css";
+import { blue } from "@mui/material/colors";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+
+const color = blue[50];
 function Navbar(props) {
   const { children, window } = props;
 
@@ -54,19 +62,68 @@ Navbar.propTypes = {
 };
 
 export default function MyNavbar(props) {
+  const { cartLength, useAuth, logout } = useContext(tiketContext);
+  const currentUser = useAuth();
   return (
     <React.Fragment>
       <CssBaseline />
       <AppBar>
         <Toolbar sx={{ justifyContent: "space-between" }}>
-          <Typography variant="h6" component="div">
-            <img width="100" src={logo} alt="logo" />
-          </Typography>
-          <Typography variant="h6" component="div">
-            <FlightIcon sx={{ color: "text.secondary" }} />
-            <LocalGroceryStoreIcon sx={{ color: "text.secondary" }} />
-            <PersonIcon sx={{ color: "text.secondary" }} />
-          </Typography>
+          <div style={{ display: "flex" }}>
+            <Link to="/">
+              <Typography variant="h6" component="div">
+                <img
+                  width="120"
+                  src={logo}
+                  alt="logo"
+                  style={{ marginTop: "10px" }}
+                />
+              </Typography>
+            </Link>
+            <Link to="/">
+              <IconButton>
+                <HomeIcon fontSize="large" />
+              </IconButton>
+            </Link>
+          </div>
+          <Box sx={{ flexDirection: "column" }}>
+            <Typography style={{ color: "black" }} variant="h6" component="div">
+              {currentUser?.email.substring(0, currentUser.email.length - 10)}
+              {currentUser ? (
+                <Link to="/login">
+                  <AccountCircleIcon
+                    sx={{ color: "text.secondary" }}
+                    fontSize="large"
+                  />
+                </Link>
+              ) : (
+                <Link to="/login">
+                  <AccountCircleIcon
+                    sx={{ color: "text.secondary" }}
+                    fontSize="large"
+                  />
+                </Link>
+              )}
+            </Typography>
+            <Link to="/list">
+              <IconButton color="inherit" sx={{ alignItems: "center", m: "3" }}>
+                <FlightTakeoffIcon
+                  sx={{ color: "text.secondary" }}
+                  fontSize="large"
+                />
+              </IconButton>
+            </Link>
+            <Link to="/cart" style={{ textDecoration: "none" }}>
+              {" "}
+              <Badge badgeContent={cartLength} color="secondary">
+                <LocalGroceryStoreIcon
+                  sx={{ color: "text.secondary" }}
+                  style={{ marginRight: "10px" }}
+                  fontSize="large"
+                />
+              </Badge>
+            </Link>
+          </Box>
         </Toolbar>
       </AppBar>
       <Toolbar id="back-to-top-anchor" sx={{ m: 1 }} />

@@ -9,6 +9,8 @@ import EditTiket from "./component/CRUT/EditTiket/EditTiket";
 import MyContextProvider from "./component/MyContext/MyContext";
 import MyNavbar from "./component/MyNavbar/MyNavbar";
 import Home from "./component/Home/Home";
+import Cart from "./component/Cart/Cart";
+import CreditCard from "./component/CreditCard/CreditCard";
 const MyRoutes = () => {
   return (
     <MyContextProvider>
@@ -22,7 +24,9 @@ const MyRoutes = () => {
           <Route path="/display" element={<DisplayCard />} />
           <Route path="/" element={<Home />} />
           <Route path="/list" element={<DisplayList />} />
-          <Route path="/edit/:id" element={<EditTiket />} />
+          <Route path="/list/edit/:id" element={<EditTiket />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/credit" element={<CreditCard />} />
         </Routes>
       </BrowserRouter>
     </MyContextProvider>
